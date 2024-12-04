@@ -1,0 +1,26 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+.toggle-ellipsis__content ul{
+margin: 0px 6px;
+}
+
+.checkmark-list li {
+  position: relative;
+  margin-bottom: 15px;
+  font-family: Source Sans Pro;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  padding-left: 15px;
+  list-style: none;
+}
+
+.checkmark-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: black;
+  font-weight: bold;
+  font-size: 12px;
+}
