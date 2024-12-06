@@ -42,7 +42,7 @@
     }
     bodyEle.classList.add(testInfo.className);
 
-    document.addEventListener("DOMContentLoaded", () => {
+    
       // Step 1: Rearrange the sections
       const section1 = document.querySelector('[data-id="e65a383"]');
       const section2 = document.querySelector('[data-id="2a619b7"]');
@@ -67,37 +67,38 @@
 
       // Step 2: Dynamically update image
       // Array of data-id values for images to be updated
-      const imageIds = [
-        "fb464d1",
-        "cdb0ae4",
-        "5b5d790",
-        "6d1cc43",
-        "6275132",
-        "8fa4c4a",
-      ];
+  const imageIds = [
+    "fb464d1",
+    "cdb0ae4",
+    "5b5d790",
+    "6d1cc43",
+    "6275132",
+    "8fa4c4a",
+  ];
 
-      // Dynamically update images
-      imageIds.forEach((id, index) => {
-        const sourceElement = document.querySelector(`[data-id="${id}"] img`);
-        const targetElement = document.querySelector(
-          `[data-id="${imageIds[(index + 3) % imageIds.length]}"] img`
-        );
+  // Dynamically update images
+  imageIds.forEach((id, index) => {
+    // Select the source image from the current element
+    const sourceElement = document.querySelector(`[data-id="${id}"] img`);
 
-        if (sourceElement && targetElement) {
-          // Update target image src and alt from the source
-          targetElement.src = sourceElement.src;
-          targetElement.alt = sourceElement.alt;
+    // Determine the target element dynamically (shifting by 3 in the array)
+    const targetDataId = imageIds[(index + 3) % imageIds.length];
+    const targetElement = document.querySelector(`[data-id="${targetDataId}"] img`);
 
-          console.log(
-            `Updated target image in [data-id="${imageIds[(index + 3) % imageIds.length]}"] from source [data-id="${id}"].`
-          );
-        } else {
-          console.warn(`Image element missing for data-id: ${id}`);
-        }
-      });
+    if (sourceElement && targetElement) {
+      // Update target image src and alt from the source image
+      targetElement.src = sourceElement.src;
+      targetElement.alt = sourceElement.alt;
 
-      console.log("Dynamic image updates completed.");
-    });
+      console.log(
+        `Updated target image in [data-id="${targetDataId}"] from source [data-id="${id}"].`
+      );
+    } else {
+      console.warn(`Image element missing for source [data-id="${id}"] or target [data-id="${targetDataId}"].`);
+    }
+  });
+
+  console.log("Dynamic image updates completed.");
   };
 
   waitForElement(".page-content").then(() => {

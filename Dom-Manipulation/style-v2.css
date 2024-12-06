@@ -1,0 +1,12 @@
+    /* Parent container */
+    .page-content {
+        display: flex;
+        flex-direction: column; 
+      }
+  
+      /* CSS to swap section positions */
+      [data-id="e65a383"] { order: 2; } /* Section 1 */
+      [data-id="2a619b7"] { order: 3; } /* Section 2 */
+      [data-id="1aa3a1d"] { order: 1; } /* Section 3 */
+      [data-id="ff1109a"] { order: 4; } /* Section 4 */
+      [data-id="65fce0f"] { order: 5; } /* Section 5 */

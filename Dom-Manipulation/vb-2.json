@@ -1,6 +1,7 @@
 {
     "files": [
-        "./script-v1.js"
+        "./style-v2.css",
+        "./script-v2.js"
     ],
     "urls": [
         "https://shield-wallet.com/"
