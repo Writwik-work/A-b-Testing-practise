@@ -1,0 +1,20 @@
+.card__media {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    width: 100%; 
+    height: 200px; 
+    overflow: hidden; 
+  }
+  
+  .card__media img {
+    width: auto;
+    height: 100%; 
+  }
+  .card__information{
+    margin: 0%;
+  }
+  
+  
+  
+  

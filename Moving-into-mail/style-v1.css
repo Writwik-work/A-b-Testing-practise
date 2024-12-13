@@ -1,0 +1,28 @@
+/* Hover effect for multicolumn-card */
+.multicolumn-card__info:hover {
+    background-color: #f9f9f9; /* Change to a light gray on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+  }
+  
+  /* Style for @thewxstore.com to underline */
+  .multicolumn-card a.email-link {
+    color: inherit; /* Inherit the text color */
+    text-decoration: underline; /* Underline the email link */
+    cursor: pointer; /* Change cursor to pointer for interactivity */
+  }
+  
+  /* Style for Email text and arrow */
+  .link {
+    font-weight: bold; /* Make the text bold */
+    color: black; /* Change the color to black */
+  }
+  
+  .multicolumn-card .icon-wrap {
+    font-weight: bold; /* Make the arrow bold */
+    color: black; /* Change the arrow color to black */
+  }
+  .email-link {
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+  }

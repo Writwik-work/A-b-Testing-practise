@@ -1,0 +1,13 @@
+/* Sticky Style */
+@media screen and (max-width: 2140px) {
+    .sticky-header {
+      background-color: white; 
+      position: sticky;
+      top: 78px;
+      z-index: 1;
+      width: 72%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      padding: 10px 0px;
+    }
+  }
+  
