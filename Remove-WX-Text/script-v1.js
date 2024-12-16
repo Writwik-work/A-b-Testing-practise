@@ -35,17 +35,23 @@
       }
       bodyEle.classList.add(testInfo.className);
   
-      const sectionId = "collection-template--16930570272968__featured_collection2";
-      const section = document.getElementById(sectionId);
-      if (section) {
-        section.remove(); // Removes the section from the DOM
-        console.log(`Section with ID '${sectionId}' has been removed.`);
+      const className = "caption-with-letter-spacing"; 
+      const sections = document.getElementsByClassName(className); 
+      
+    
+      if (sections.length > 0) {
+       
+        Array.from(sections).forEach(section => {
+          section.remove(); 
+          console.log(`Section with class '${className}' has been removed.`);
+        });
       } else {
-        console.warn(`Section with ID '${sectionId}' not found.`);
+        console.warn(`Section with class '${className}' not found.`);
       }
+      
     };
   
-    waitForElement("#collection-template--16930570272968__featured_collection2").then(() => {
+    waitForElement(".card-information").then(() => {
       console.log("<-- Test Name:", testInfo.testName, "Load -->");
       loadTest();
     });

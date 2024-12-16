@@ -1,20 +1,62 @@
+/* Card container: ensures consistent height */
+.card__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%; /* Ensures all cards stretch evenly */
+}
+
+/* Image container */
 .card__media {
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
-    width: 100%; 
-    height: 200px; 
-    overflow: hidden; 
-  }
-  
-  .card__media img {
-    width: auto;
-    height: 100%; 
-  }
-  .card__information{
-    margin: 0%;
-  }
-  
-  
-  
-  
+  width: 100%;
+  height: 200px; /* Fixed height for all images */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevent image overflow */
+}
+
+.card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain uniform aspect ratio */
+}
+
+/* Text and arrow alignment */
+.card__heading {
+  display: flex;
+  justify-content: space-between; /* Space text and arrow evenly */
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%; /* Full card width */
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.card__heading .full-unstyled-link {
+  word-break: break-word; /* Break long words */
+  margin: 0;
+  flex: 1; /* Take up remaining space */
+}
+
+.card__heading .icon-wrap {
+  margin-left: 10px;
+  flex-shrink: 0; /* Prevent arrow from shrinking */
+}
+#Slide-template--16930570272968__collection_list_Ri3Cy7-1 .card__content {
+  margin-top: 20px;
+}
+#Slide-template--16930570272968__collection_list_Ri3Cy7-2 .card__content {
+  margin-bottom: 22px;
+}
+#Slide-template--16930570272968__collection_list_Ri3Cy7-3 .card__content {
+  margin-top: 20px;
+}
+#Slide-template--16930570272968__collection_list_Ri3Cy7-4 .card__content {
+  margin-bottom: 10px;
+}
+#Slide-template--16930570272968__collection_list_Ri3Cy7-5 .card__content {
+  margin-bottom: 20px;
+}
