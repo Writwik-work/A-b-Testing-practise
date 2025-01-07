@@ -84,7 +84,7 @@ const collectionListSection = document.getElementById("shopify-section-template-
 if (heroSection && collectionListSection) {
   heroSection.insertAdjacentElement("afterend", shopByCategorySection);
 }
-      
+
     };
   
     waitForElement("#MainContent").then(() => {

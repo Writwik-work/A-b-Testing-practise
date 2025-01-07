@@ -1,0 +1,161 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Silkscreen:regular,700);
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif:regular);
+
+.theme-white {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2rem;
+  background-color: #ffffff;
+}
+
+.text-section {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-right: 2rem;
+}
+
+.text-section h1 {
+  margin-bottom: 1rem;
+  color: #333;
+  font-family: Rift;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 66.6px;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  margin-top: 173px;
+}
+
+.text-section p {
+  color: #666;
+  font-family: Silka;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+}
+
+.cards-container {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 778px;
+  height: 537px;
+  gap: 5px;
+}
+
+.card {
+  position: relative; /* Added for overlay positioning */
+  color: #fff;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 256px;
+  height: 537px;
+}
+
+.card img {
+  width: 100%; /* Adjusted to fit the card */
+  height: 100%; /* Ensures the image fills the card */
+  -o-object-fit: cover;
+     object-fit: cover; /* Ensures the image doesn’t distort */
+}
+
+.card-content {
+  position: absolute; /* Overlay the image */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  color: white;
+  z-index: 1; /* Ensures the text is on top of the image */
+}
+
+.card-content .description {
+  text-transform: uppercase;
+  color: white;
+  font-family: Rift;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 16.2px;
+  letter-spacing: 1px;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  margin-bottom: 20px;
+}
+
+.card-content h2 {
+  color: white;
+  font-family: Rift;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 34.2px;
+  text-align: left;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  -webkit-text-decoration-style: solid;
+          text-decoration-style: solid;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  margin-bottom: 15px;
+}
+
+.card-content .price {
+  color: white;
+  font-family: Rift;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+}
+.example {
+    display: -ms-grid;
+    display: grid;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+    background: -o-linear-gradient(top, white, black);
+    background: linear-gradient(to bottom, white, black);
+}
