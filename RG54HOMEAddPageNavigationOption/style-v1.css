@@ -1,0 +1,69 @@
+/* General styles */
+h1, h2 {
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  /* Navigation bar */
+  .issue-head {
+    position: fixed;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background-color: #f7f7f7;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+    transition: top 0.3s ease-in-out;
+  }
+  
+   .issue-head.show { 
+    top: 0;
+  }
+  
+  .nav-link { 
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-link:hover,
+  .nav-link.active {
+    color: #fff;
+    background-color: #228b22; 
+    text-decoration: none;
+  }
+  
+  /* Sections */
+   /* section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+  } */
+  
+   #hero { 
+    background-color: #e3f2fd;
+  }
+  
+  #how-it-works {
+    background-color: #e8f5e9;
+  }
+  
+  #why-ruff-greens {
+    background-color: #fffde7;
+  }
+  
+  #benefits {
+    background-color: #ffebee;
+  }
+   
