@@ -1,69 +1,134 @@
-/* General styles */
-h1, h2 {
-    margin: 0;
-    padding: 10px 0;
-    text-align: center;
+@import url(https://fonts.googleapis.com/css?family=Mulish:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+/* Style for the navigation bar */
+.dynamic-navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #faf9f8;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border-bottom: 1px solid #d8d8d8;
+  gap: 15px;
+}
+
+/* Style for the navigation links */
+.nav-links {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links .nav-link {
+  text-decoration: none;
+  color: #333;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+  font-family: Mulish;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20.08px;
+  text-align: center;
+  text-underline-position: from-font;
+  position: relative; /* For positioning the underline */
+}
+
+/* Hover and active state */
+.nav-links .nav-link:hover,
+.nav-links .nav-link.active {
+  color: #000000;
+  font-weight: bolder;
+}
+
+/* Green underline for active link */
+.nav-links .nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #1c6b39;
+  -webkit-transition: width 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .dynamic-navbar {
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: start;
+    position: relative;
   }
-  
-  /* Navigation bar */
-  .issue-head {
-    position: fixed;
-    top: 40px;
+
+  .dynamic-navbar .nav-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    gap: 15px;
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    transition: -webkit-transform 0.3s ease-in-out;
+    -o-transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    scroll-behavior: smooth;
+    overflow-x: auto; /* Makes the nav links scrollable */
+    padding: 10px 0;
+  }
+
+  .dynamic-navbar .nav-link {
+    white-space: nowrap; /* Prevents text wrapping */
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    -webkit-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+    -ms-flex-negative: 0;
+    flex-shrink: 0; /* Ensures items don't shrink */
+  }
+
+  .nav-links .nav-link:hover,
+  .nav-links .nav-link.active {
+    color: #000000;
+    font-weight: bolder;
+  }
+
+  .dynamic-navbar .nav-link.active::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
     left: 0;
     width: 100%;
-    background-color: #f7f7f7;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 10px 0;
-    transition: top 0.3s ease-in-out;
+    height: 2px;
+    background-color: #1c6b39;
   }
-  
-   .issue-head.show { 
-    top: 0;
-  }
-  
-  .nav-link { 
-    text-decoration: none;
-    color: #555;
-    font-weight: bold;
-    font-size: 1rem;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-  }
-  
-  .nav-link:hover,
-  .nav-link.active {
-    color: #fff;
-    background-color: #228b22; 
-    text-decoration: none;
-  }
-  
-  /* Sections */
-   /* section {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid #ddd;
-  } */
-  
-   #hero { 
-    background-color: #e3f2fd;
-  }
-  
-  #how-it-works {
-    background-color: #e8f5e9;
-  }
-  
-  #why-ruff-greens {
-    background-color: #fffde7;
-  }
-  
-  #benefits {
-    background-color: #ffebee;
-  }
-   
+}
