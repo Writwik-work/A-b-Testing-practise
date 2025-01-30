@@ -1,49 +1,49 @@
 (() => {
-    "use strict";
-    const testInfo = {
-      className: "home-hero-test",
-      debug: 0,
-      testName: "Home Hero Layout",
-      testVersion: "0.0.1",
-      pagePath: window.location.pathname,
-      pageURL: window.location.href,
-      imgBaseURL: "",
-    };
-    const waitForElement = (selector) => {
-      return new Promise((resolve) => {
-        if (document.querySelector(selector)) {
-          return resolve(document.querySelector(selector));
-        } else {
-          window.DOMContentLoaded = () => {
-            return reject(
-              document.querySelector(selector),
-              "Target element not found."
-            );
-          };
-        }
-        const observer = new MutationObserver((mutations) => {
-          if (document.querySelector(selector)) {
-            resolve(document.querySelector(selector));
-            observer.disconnect();
-          }
-        });
-        observer.observe(document.documentElement, {
-          childList: true,
-          subtree: true,
-        });
-      });
-    };
-    const loadTest = () => {
-      const bodyEle = document.body;
-      if (bodyEle.classList.contains(testInfo.className)) {
-        return;
+  "use strict";
+  const testInfo = {
+    className: "home-hero-test",
+    debug: 0,
+    testName: "Home Hero Layout",
+    testVersion: "0.0.1",
+    pagePath: window.location.pathname,
+    pageURL: window.location.href,
+    imgBaseURL: "",
+  };
+  const waitForElement = (selector) => {
+    return new Promise((resolve) => {
+      if (document.querySelector(selector)) {
+        return resolve(document.querySelector(selector));
+      } else {
+        window.DOMContentLoaded = () => {
+          return reject(
+            document.querySelector(selector),
+            "Target element not found."
+          );
+        };
       }
-      bodyEle.classList.add(testInfo.className);
-      
-        const themeWhiteElement = document.querySelector(".theme-white");
-      
-        if (themeWhiteElement) {
-          themeWhiteElement.innerHTML = `
+      const observer = new MutationObserver((mutations) => {
+        if (document.querySelector(selector)) {
+          resolve(document.querySelector(selector));
+          observer.disconnect();
+        }
+      });
+      observer.observe(document.documentElement, {
+        childList: true,
+        subtree: true,
+      });
+    });
+  };
+  const loadTest = () => {
+    const bodyEle = document.body;
+    if (bodyEle.classList.contains(testInfo.className)) {
+      return;
+    }
+    bodyEle.classList.add(testInfo.className);
+
+    const themeWhiteElement = document.querySelector(".theme-white");
+
+    if (themeWhiteElement) {
+      themeWhiteElement.innerHTML = `
             <div class="main-container">
               <!-- Left Text Section -->
               <div class="text-section">
@@ -82,16 +82,10 @@
               </div>
             </div>
           `;
-        
-     
-      
-  }
-      
-  
-    };
-    waitForElement(".mainbanner-full").then(() => {
-      console.log("<-- Test Name:", testInfo.testName, "Load -->");
-      loadTest();
-    });
-  })();
-  
+    }
+  };
+  waitForElement(".mainbanner-full").then(() => {
+    console.log("<-- Test Name:", testInfo.testName, "Load -->");
+    loadTest();
+  });
+})();
