@@ -1,0 +1,100 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+3:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+/* Search container styling */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 5px 10px;
+  width: 263px;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  padding: 5px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16.34px;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.search-button i {
+  color: #333;
+}
+
+/* Make the anchor/ SVG icon appear on the left with some spacing */
+.search-icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 8px;
+  text-decoration: none;
+}
+
+.search-icon svg {
+  width: 20px;
+  height: 26px;
+  color: black;
+}
+
+.header:not(.header--top-center) *>.header__search {
+  display: none
+;
+}
+nav.header__inline-menu ul.list-menu.list-menu--inline li a.header__menu-item, summary.header__menu-item.list-menu__item.link.focus-inset span {
+  font-weight: 800;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+.header__menu-item {
+  padding: 10px;
+  text-decoration: none;
+  color: rgba(var(--color-foreground), 0.9);
+}
+@media screen and (max-width: 425px) {
+  .search-bar {
+    width: 100%;
+    max-width: 300px;
+    padding: 8px;
+    border-radius: 5px;
+    justify-content: space-between;
+  }
+
+  .search-input {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .search-button {
+    font-size: 14px;
+  }
+
+  .search-icon svg {
+    width: 18px;
+    height: 22px;
+  }
+}
+
+
