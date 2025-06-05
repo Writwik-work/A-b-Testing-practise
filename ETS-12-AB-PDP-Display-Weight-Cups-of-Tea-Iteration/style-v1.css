@@ -26,16 +26,6 @@
   cursor: pointer;
 }
 
-.package-option-desc {
-  display: block;
-  text-align: left;
-  margin: 5px 0;
-  font-family: Roboto;
-  font-weight: 400;
-  font-size: 11px;
-  line-height: 13.79px;
-  color: #4e4e4e;
-}
 .package-option-weight {
   display: block;
   text-align: left;
@@ -46,6 +36,7 @@
   line-height: 22.46px;
   color: #4e4e4e;
 }
+
 .package-option-servings {
   display: block;
   text-align: left;
@@ -54,8 +45,18 @@
   font-weight: 600;
   font-size: 12px;
   line-height: 15.96px;
-  letter-spacing: 0%;
   color: #967102;
+}
+
+.package-option-desc {
+  display: block;
+  text-align: left;
+  margin: 5px 0;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13.79px;
+  color: #4e4e4e;
 }
 
 .discount-info {
@@ -64,15 +65,54 @@
   bottom: 15px;
   font-size: 16px;
 }
+
+/* Styling for the dynamic pricing details */
+.pricing-details {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.current-price {
+  font-weight: 600;
+}
+
+.package-details {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  color: #4e4e4e;
+}
+
+.servings-info {
+  font-weight: 600;
+  color: #967102;
+}
+
+.description-info {
+  font-style: italic;
+  margin-left: 5px;
+}
+
+/* Optional: styling for an input field (e.g., for dynamic package selection by text) */
+#ozInput {
+  display: block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+}
+
 .save-price {
   position: absolute;
   right: 0px;
   color: white;
-  padding: 8px 6px;
+  padding: 0px 6px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
   width: 80px;
   border-radius: 24px;
-  border-width: 1px;
   background: #2a5d5a;
   font-family: Roboto;
   font-weight: 400;
@@ -109,6 +149,7 @@
   .package-option-desc {
     text-align: center; 
   }
+  
   .discount-info {
     position: relative;
     right: 40px;

@@ -1,0 +1,54 @@
+@import url(https://fonts.googleapis.com/css?family=Barlow:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+/* Container that holds all six sections */
+.rr-13-info-sections {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+/* Each gray rectangle */
+.rr-13-info-item {
+  background-color: #fff;
+  padding: 12px;
+  border-style: solid;
+  border-color: #d7d7d7;
+  height: 120px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-top-width: 1px;
+}
+
+/* Emoji + Title row */
+.rr-13-info-title {
+  font-family: Barlow;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  /* letter-spacing: 0%; */
+  vertical-align: middle;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+/* Body text under each title */
+.rr-13-info-body {
+  font-family: Barlow;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #000000;
+}
+
+.rr-13-test .product-warranty-security-container {
+  margin-top: 8px;
+}

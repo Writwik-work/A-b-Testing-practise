@@ -1,0 +1,69 @@
+@media (max-width: 575px) {
+  .header__logo {
+    display: flex !important; 
+    align-items: center !important;
+    /* We’ll position children absolutely if needed, so make this relative */
+    position: relative;
+
+    /* Example background/spacing */
+    background-color: #0b3a48;
+    padding: 2.5rem 1rem !important;
+  }
+
+  /* 2) Hamburger on the far left */
+  .nav__toggle {
+    position: absolute; 
+    left: -20px;       
+    top: 50%;         /* vertical center relative to .logo-block */
+    transform: translateY(-50%);
+  
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* Style the hamburger bars */
+  .nav__toggle span {
+    margin: 0;
+    opacity: 1;
+    width: 26px;
+    height: 3px;
+    display: block;
+    position: absolute;
+    border-radius: 10px;
+    background: #111;
+    transform: rotate(0);
+    transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+  }
+  
+
+  /* 3) The logo in the center */
+  .header__logo > a[aria-label="website logo"] {
+    position: absolute;
+    left: 84%;
+    transform: translateX(-50%);
+    text-decoration: none;
+  }
+
+  /* 4) Cart on the right */
+  .pm-header-cart{
+    /* The cart stays in normal flow on the right by giving it left auto-margin */
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    /* no special positioning needed unless you want to tweak further */
+  }
+  
+
+  /* Example styling for cart image */
+  .pm-cart-img {
+    max-height: 32px; /* tweak as needed */
+  }
+}
+@media (max-width: 990px) {
+  #shopify-section-bb-header .pm-header-cart .pm-cart-item {
+      margin-right: 0px !important;
+  }
+}
