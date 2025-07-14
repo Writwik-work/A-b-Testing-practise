@@ -1,0 +1,37 @@
+/* only when .rr-16-fullscreen-cart is on body */
+body.rr-16-fullscreen-cart #mini-cart.cart-block {
+  position:    fixed !important;
+  top:         0;
+  right:       0;
+  width:       100vw;
+  max-width:   400px;    /* shrink back down on wide screens */
+  height:      100vh !important;
+  background:  white;
+  z-index:     9999;
+  overflow:    hidden;
+}
+
+/* make inner wrapper a column flex container */
+body.rr-16-fullscreen-cart 
+  #mini-cart.cart-block .cart-block-inner {
+  display:        flex;
+  flex-direction: column;
+  height:         100%;
+}
+
+/* let the items list scroll */
+body.rr-16-fullscreen-cart 
+  #mini-cart.cart-block .cart-items {
+  flex:        1 1 auto;
+  overflow-y:  auto;
+}
+
+/* pin the checkout footer to the bottom */
+body.rr-16-fullscreen-cart 
+  #mini-cart.cart-block .mini-cart-sticky-checkout-details {
+  flex:             0 0 auto;
+  position:         sticky;
+  bottom:           0;
+  background-color: #fff;
+  z-index:          10;
+}

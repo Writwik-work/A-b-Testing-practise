@@ -1,0 +1,46 @@
+.rr-15-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.rr-15-link {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  background-color: #d31016;
+  color: #fff;
+  text-align: center;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.rr-15-link:hover {
+  background-color: #b10e12;
+}
+
+.rr-15-review {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rr-15-stars {
+  display: flex;
+  gap: 4px;
+}
+
+.rr-15-star {
+  color: #d31016;
+  font-size: 20px;
+}
+
+.rr-15-review-text {
+  font-size: 16px;
+  color: #000;
+}
