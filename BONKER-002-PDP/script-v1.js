@@ -5,7 +5,7 @@
     className: "bonker-002-test",
     debug: 0,
     testName: "BONKER-002-PDP",
-    testVersion: "0.0.1",
+    testVersion: "0.0.2",
     pagePath: window.location.pathname,
     pageURL: window.location.href,
     imgBaseURL: "",
@@ -31,26 +31,36 @@
       "Sleeve Length": "",
       Composition: "",
       GSM: "",
-      Colour: ""
+      Colour: "",
+      Waist: ""
     };
 
-    // Entire page text content
     const pdText = document.body.innerText;
 
-    // Pull values from paragraph-like layout
     const regexMap = {
       Composition: /Composition:\s*(.+)/i,
       GSM: /GSM:\s*(\d+)/i,
       Colour: /Colou?r:\s*(.+)/i,
       Neckline: /Neckline:\s*(.+)/i,
+      Neck: /Neck:\s*(.+)/i,
       "Sleeve Length": /Sleeve length:\s*(.+)/i,
+      Sleeves: /Sleeves:\s*(.+)/i,
       Fit: /Fit:\s*(.+)/i,
+      Waist: /Waist:\s*(.+)/i
     };
 
-    for (const key in regexMap) {
-      const match = pdText.match(regexMap[key]);
-      if (match) details[key] = match[1].trim();
-    }
+    // fallback logic
+    details.Neckline =
+      (pdText.match(regexMap.Neckline) || pdText.match(regexMap.Neck) || [])[1]?.trim() || "";
+
+    details["Sleeve Length"] =
+      (pdText.match(regexMap["Sleeve Length"]) || pdText.match(regexMap.Sleeves) || [])[1]?.trim() || "";
+
+    details.Composition = (pdText.match(regexMap.Composition) || [])[1]?.trim() || "";
+    details.GSM = (pdText.match(regexMap.GSM) || [])[1]?.trim() || "";
+    details.Colour = (pdText.match(regexMap.Colour) || [])[1]?.trim() || "";
+    details.Fit = (pdText.match(regexMap.Fit) || [])[1]?.trim() || "";
+    details.Waist = (pdText.match(regexMap.Waist) || [])[1]?.trim() || "";
 
     return details;
   }
@@ -66,10 +76,11 @@
       <div class="highlights-grid">
         ${details.Fit ? `<div class="highlight-pair"><span>Fit</span><strong>${details.Fit}</strong></div>` : ''}
         ${details.Composition ? `<div class="highlight-pair"><span>Composition</span><strong>${details.Composition}</strong></div>` : ''}
-        ${details.Neckline ? `<div class="highlight-pair"><span>Neckline</span><strong>${details.Neckline}</strong></div>` : ''}
+        ${details.Neckline ? `<div class="highlight-pair"><span>Neck</span><strong>${details.Neckline}</strong></div>` : ''}
         ${details.GSM ? `<div class="highlight-pair"><span>GSM</span><strong>${details.GSM}</strong></div>` : ''}
-        ${details["Sleeve Length"] ? `<div class="highlight-pair"><span>Sleeve Length</span><strong>${details["Sleeve Length"]}</strong></div>` : ''}
+        ${details["Sleeve Length"] ? `<div class="highlight-pair"><span>Sleeve</span><strong>${details["Sleeve Length"]}</strong></div>` : ''}
         ${details.Colour ? `<div class="highlight-pair"><span>Colour</span><strong>${details.Colour}</strong></div>` : ''}
+        ${details.Waist ? `<div class="highlight-pair"><span>Waist</span><strong>${details.Waist}</strong></div>` : ''}
       </div>
     `;
 
