@@ -1,0 +1,17 @@
+body.elh-11-test .elh-11-headline {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+  color: #003333;
+  margin: 0 auto;
+  padding: 0px 0px 0px 9px;
+}
+
+@media (min-width: 768px) {
+  body.elh-11-test .elh-11-headline {
+    font-size: 32px;
+    line-height: 1.3px;
+    padding: 0;
+  }
+}
