@@ -1,0 +1,52 @@
+.rg-25-test-v2 .rg25-card {
+  background:#fff;
+  padding:18px 26px 12px;
+  margin:5px 0;
+}
+
+.rg-25-test-v2 .rg25-title{
+  font-family: Mulish, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  text-align: center;
+  margin: 0 0 20px;
+  color: #024012;
+  text-transform: none;
+}
+
+.rg-25-test-v2 .rg25-grid {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  column-gap:24px;
+  row-gap:22px;
+  padding:0 8px;
+}
+
+.rg-25-test-v2 .rg25-cell {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+
+.rg-25-test-v2 .rg25-icon {
+  width:48px;
+  height:48px;
+  margin-bottom:8px;
+}
+.rg-25-test-v2 .rg25-icon img {
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+}
+
+.rg-25-test-v2 .rg25-head{
+  font-family: Mulish, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  color:#000;
+  margin:0 0 4px;
+}

@@ -1,0 +1,93 @@
+/* Card */
+.rg-25-test-v3 .rg25-card {
+  background: #fff;
+  padding: 18px 22px 5px;
+  margin: 5px 0;
+}
+
+/* Section title */
+.rg-25-test-v3 .rg25-title {
+  font-family: Mulish, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  text-align: center;
+  margin: 0 0 14px;
+  color: #024012;
+  text-transform: none;
+}
+
+/* Grid: 2 columns on mobile */
+.rg-25-test-v3 .rg25-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 24px;
+  row-gap: 20px;
+  padding: 0 6px;
+}
+
+/* Each feature cell: STACK + CENTER */
+.rg-25-test-v3 .rg25-cell {
+  display: flex;
+  flex-direction: column; /* << was row */
+  align-items: center; /* << center */
+  text-align: center; /* << center */
+}
+
+/* Icon block */
+.rg-25-test-v3 .rg25-icon {
+  width: 46px;
+  height: 46px;
+  margin-bottom: 8px;
+}
+.rg-25-test-v3 .rg25-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Text */
+.rg-25-test-v3 .rg25-head {
+  display: block; /* << forces new line */
+  font-family: Mulish, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  color: #000;
+  margin: 0 0 4px;
+}
+.rg-25-test-v3 .rg25-sub {
+  display: block;
+  font-family: Mulish, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 100%;
+  color: #5b5b5b;
+  margin: 0;
+}
+
+/* CTA */
+.rg-25-test-v3 .rg25-cta-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.rg-25-test-v3 .rg25-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  background: #ff462c;
+  color: #fff;
+  border-radius: 20px;
+  font-family: Mulish;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: center;
+  vertical-align: middle;
+}
+.rg-25-test-v3 .rg25-cta:active {
+  transform: translateY(1px);
+}
