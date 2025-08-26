@@ -1,0 +1,25 @@
+.mn-29-test-v2 .cat-banner-content .classyunicodedone {
+    margin-bottom: 6px;
+    max-width: 95%;
+}
+.mn-29-test-v2 .hero-subhead, 
+.mn-29-test-v2 .hero-bullet {
+    font-family: "PT Serif", serif;
+    font-weight: 400;
+    font-style: Italic;
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: 0.25px;
+    text-align: center;
+    color: #eaeadf;
+    margin-bottom: 5px;
+}
+.mn-29-test-v2 .hero-bullet {
+    font-size: 24px;
+    font-style: normal;
+    letter-spacing: 0;
+}
+.mn-29-test-v2 .hero-bullet span {
+    margin: 0 3px;
+    font-size: 28px;
+}
