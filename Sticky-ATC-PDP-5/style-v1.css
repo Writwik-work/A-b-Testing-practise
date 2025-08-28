@@ -1,0 +1,188 @@
+/* container */
+.fw-05b-test .ps-sticky {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  box-shadow: 0 -5px 20.2px 0 #a3a3a336;
+  padding: 10px 0;
+  z-index: 99999;
+  display: none;
+}
+.fw-05b-test .ps-sticky__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+/* left */
+.fw-05b-test .ps-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.fw-05b-test .ps-thumb img {
+  width: 86px;
+}
+.fw-05b-test .ps-title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: -0.99px;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+
+/* price row: SALE (ORIGINAL) SAVE £x.xx */
+.fw-05b-test .ps-price {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  top: 3px;
+}
+.fw-05b-test .ps-price span {
+  font-family: "Oswald", sans-serif;
+  line-height: 100%;
+  text-transform: uppercase;
+  margin: 0;
+}
+.fw-05b-test .ps-now {
+  font-weight: 700;
+  font-size: 16px;
+  color: #231f20;
+}
+.fw-05b-test .ps-was {
+  font-weight: 300;
+  font-size: 16px;
+  color: #525252;
+  text-decoration: line-through;
+}
+.fw-05b-test .ps-save {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background: #eb001b;
+  padding: 4px 8px;
+  margin-left: 8px;
+  min-height: 29px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fw-05b-test .ps-save-val {
+  margin-left: 3px;
+}
+
+/* right side */
+.fw-05b-test .ps-delivery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.fw-05b-test #delivery-text {
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 25.2px;
+  letter-spacing: 0.01px;
+  color: #121212;
+}
+.fw-05b-test .ps-atc {
+  background: #121212;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 7px 15px 8px;
+  min-width: 321px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  margin: 4px 0;
+}
+.fw-05b-test .ps-ship {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: center;
+}
+.fw-05b-test .ps-ship span {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  color: #121212;
+}
+.fw-05b-test #delivery-icon {
+  display: inline-block;
+  animation: ps-wiggle 2s ease-in-out infinite;
+}
+
+@keyframes ps-wiggle {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+/* mobile CTA detail */
+.fw-05b-test .ps-cta-strong {
+  font-weight: 500;
+}
+.fw-05b-test .ps-cta-light {
+  font-weight: 300;
+  color: #acacac;
+  margin-left: 5px;
+  text-decoration: line-through;
+}
+.fw-05b-test .ps-cta-save {
+  margin-left: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background: #eb001b;
+  padding: 4px 8px;
+  margin-left: 8px;
+  min-height: 29px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 749.98px) {
+  .fw-05b-test .ps-sticky {
+    padding: 10px 15px;
+  }
+  .fw-05b-test .ps-sticky__inner {
+    justify-content: center;
+  }
+  .fw-05b-test .ps-left {
+    display: none;
+  }
+  .fw-05b-test .ps-atc {
+    max-width: 354px;
+    width: 100%;
+    min-width: auto;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 8px 0;
+  }
+}
