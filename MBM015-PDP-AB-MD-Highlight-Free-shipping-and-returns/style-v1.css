@@ -1,0 +1,29 @@
+.mb-v1-test .mb-v1-value-props {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.mb-v1-test .mb-vp {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mb-v1-test .mb-vp img {
+  width: 19px;
+  height: 21px;
+}
+
+.mb-v1-test .mb-vp span {
+font-family: Lato;
+font-weight: 700;
+font-style: Bold;
+font-size: 14px;
+line-height: 20px;
+letter-spacing: 0%;
+text-align: center;
+vertical-align: middle;
+color: #033551;
+}
