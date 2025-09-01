@@ -1,0 +1,64 @@
+/* Row */
+.mn-16-test-v2 .cart-value-props{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap: 72px;
+  background: #6B929017;
+}
+
+.mn-16-test-v2 .cart-value-props .prop + .prop{
+  margin-left:72px; 
+}
+
+
+.mn-16-test-v2 .cart-value-props .prop{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;               
+}
+
+/* Icon */
+.mn-16-test-v2 .cart-value-props img{
+  width:38px;
+  height:38px;
+  margin:0;
+}
+
+/* Text */
+.mn-16-test-v2 .cart-value-props .prop span{
+  display:inline-flex;
+  align-items:center;
+  height:38px;
+  line-height:38px;
+  font-family:Lato, sans-serif;
+  font-weight:400;
+  font-size:12px;
+  letter-spacing:0;
+  color:#333;
+}
+/* mobile fix */
+@media (max-width: 767px) {
+  .mn-16-test-v2 .cart-value-props {
+    flex-direction: column;     
+    gap: 16px;                  
+    align-items: center;        
+  }
+
+  .mn-16-test-v2 .cart-value-props .prop {
+    display: flex;              
+    align-items: center;
+    gap: 10px;                  
+    width: 35%;                
+    justify-content: center;    
+  }
+
+  .mn-16-test-v2 .cart-value-props img {
+    flex-shrink: 0;             /* prevent icon from shrinking */
+  }
+
+  .mn-16-test-v2 .cart-value-props .prop span {
+    line-height: 1.3;           /* normal text wrapping */
+    height: auto;               /* remove fixed height */
+  }
+}

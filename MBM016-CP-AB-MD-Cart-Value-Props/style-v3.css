@@ -1,0 +1,35 @@
+.mn-16-test-v3 .cart-value-props {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  background: var(--Primary, #6b9290);
+  padding: 10px 0;
+  height: 43px;
+}
+
+.mn-16-test-v3 .cart-value-props .prop {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mn-16-test-v3 .cart-value-props img {
+  width: 21px;
+  height: 32px;
+}
+.mn-16-test-v3 .icon-wide{
+width: 32px !important;
+height: 25px !important;
+}
+
+.mn-16-test-v3 .cart-value-props .prop p {
+  font-family: Lato;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 11.98px;
+  line-height: 13.66px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #ffffff;
+}
